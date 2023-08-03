@@ -9,6 +9,58 @@ This is a basic application that can add users to a tea subscription, remove the
 
 ### Subscribing
 ```/api/v1/customer_subs ```
+Request Body:
+```{
+    "customer_sub": {
+        "subscription_id": 5, 
+        "customer_id": 6
+    }
+}
+```
+
+Response Example:
+```
+  {
+    "data": {
+        "id": "12",
+        "type": "customer_sub",
+        "attributes": {
+            "id": 12,
+            "customer_id": 6,
+            "subscription_id": 5,
+            "customer": {
+                "id": 6,
+                "first_name": "Nery",
+                "last_name": "Stark",
+                "email": "emery_torp@nader.example",
+                "address": "Apt. 552 83464 Jacobi Mountain, Olenmouth, GA 62759-4730",
+                "created_at": "2023-08-03T01:42:17.558Z",
+                "updated_at": "2023-08-03T01:42:17.558Z"
+            },
+            "subscription": {
+                "id": 5,
+                "title": "Tea Subscribtion 85",
+                "price": "50.38",
+                "status": "in_progress",
+                "frequency": "weekly",
+                "created_at": "2023-08-03T01:42:17.550Z",
+                "updated_at": "2023-08-03T01:42:17.550Z"
+            },
+            "tea": [
+                {
+                    "id": 5,
+                    "title": "Congou",
+                    "description": "Herbal",
+                    "temperature": 197,
+                    "brew_time": 321,
+                    "created_at": "2023-08-03T01:42:17.549Z",
+                    "updated_at": "2023-08-03T01:42:17.549Z"
+                }
+            ]
+        }
+    }
+}
+```
 ### Unsubscribing
 ```/api/v1/customer_subs/:id ```
 ### All Subscriptions
