@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##SCHEMA
+<img width="652" alt="image" src="https://github.com/kohyoungheon/tea_subscription/assets/92887935/c89b5c1c-244f-48c5-ad1f-d08e8b1a451a">
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
