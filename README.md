@@ -9,7 +9,7 @@ This is a basic application that can add users to a tea subscription, remove the
 
 ### Subscribing
 ```/api/v1/customer_subs ```
-Request Body:
+\Request Body:
 ```{
     "customer_sub": {
         "subscription_id": 5, 
