@@ -122,3 +122,34 @@ Response:
     ]
 }
 ```
+
+## How to Install Locally
+Ensure you have the correct versions of Ruby and Ruby on Rails installed.
+
+1. In your terminal, navigate to the directory you would like to host the repository in.
+
+2. Clone the project repository:
+```
+git clone git@github.com:kohyoungheon/tea_subscription.git
+```
+3. Run `bundle install` in repository in your terminal to install project gems.
+
+4. In the repository, run these commands to initialize the databases and set up database structure:
+
+```
+rails db:drop
+rails db:create
+rails db:migrate
+```
+
+5. Run the `bundle exec rspec` command to see all of the Rspec tests run and ensure the program is running properly.
+
+6. Run `rails s` in the repository to run endpoints.
+
+## Testing
+
+- To run tests for this app, type the following command in your terminal from inside the cloned project folder:
+
+```
+bundle exec rspec spec
+```
