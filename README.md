@@ -8,8 +8,8 @@ This is a basic application that can add users to a tea subscription, remove the
 ## Endpoints
 
 ### Subscribing
-```/api/v1/customer_subs ```
-\Request Body:
+```/api/v1/customer_subs ```\
+Request Body:
 ```{
     "customer_sub": {
         "subscription_id": 5, 
@@ -62,6 +62,63 @@ Response Example:
 }
 ```
 ### Unsubscribing
-```/api/v1/customer_subs/:id ```
+```/api/v1/customer_subs/:id ```\
+Response:
+```
+{
+    "message": "Subscription 5 cancelled successfully."
+}
+```
 ### All Subscriptions
-```/api/v1/customers/:id/subscriptions ```
+```/api/v1/customers/:id/subscriptions ```\
+Response:
+```
+{
+    "data": [
+        {
+            "id": "6",
+            "type": "subscription",
+            "attributes": {
+                "id": 6,
+                "title": "Tea Subscribtion 74",
+                "price": "70.63",
+                "status": "in_progress",
+                "frequency": "weekly",
+                "tea": [
+                    {
+                        "id": 6,
+                        "title": "Gaoshan",
+                        "description": "White",
+                        "temperature": 197,
+                        "brew_time": 577,
+                        "created_at": "2023-08-03T01:42:17.555Z",
+                        "updated_at": "2023-08-03T01:42:17.555Z"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "5",
+            "type": "subscription",
+            "attributes": {
+                "id": 5,
+                "title": "Tea Subscribtion 85",
+                "price": "50.38",
+                "status": "cancelled",
+                "frequency": "weekly",
+                "tea": [
+                    {
+                        "id": 5,
+                        "title": "Congou",
+                        "description": "Herbal",
+                        "temperature": 197,
+                        "brew_time": 321,
+                        "created_at": "2023-08-03T01:42:17.549Z",
+                        "updated_at": "2023-08-03T01:42:17.549Z"
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
