@@ -1,6 +1,6 @@
 # README
 
-This is a basic application that can add users to a tea subscription, remove them, and list subscriptions.
+This is a basic application that can add users to a tea subscription, remove them, and list subscriptions.\
 This application was built using :\
 Rails 5.2.8.1
 Ruby 2.7.4
