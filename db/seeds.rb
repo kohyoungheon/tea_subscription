@@ -5,8 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+TeaSub.destroy_all
+CustomerSub.destroy_all
+Customer.destroy_all
+Subscription.destroy_all
+Tea.destroy_all
+
+
 10.times do
-  counter = 0
 
   tea = Tea.create(
     title: Faker::Tea.variety,
@@ -16,12 +22,11 @@
   )
 
   subsciption = Subscription.create(
-    title: "Tea Subscribtion #{counter}",
+    title: "Tea Subscribtion #{Faker::Number.number(digits: 2)}",
     price: Faker::Number.decimal(l_digits: 2),
     status: Faker::Number.between(from: 0, to: 3),
     frequency: Faker::Number.between(from: 0, to: 2)
   )
-  counter += 1
 
   customer = Customer.create(
     first_name: Faker::Name.first_name,
